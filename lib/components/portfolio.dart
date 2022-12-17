@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:personal_website/components/about.dart';
+import 'package:personal_website/components/education.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({super.key});
@@ -9,8 +11,14 @@ class Portfolio extends StatefulWidget {
 
 class _PortfolioState extends State<Portfolio> {
   List<Widget> navItems = [
-    ElevatedButton(onPressed: () {}, child: const Text('Education')),
-    ElevatedButton(onPressed: () {}, child: const Text('Projects')),
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ElevatedButton(onPressed: () {}, child: const Text('Education')),
+    ),
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ElevatedButton(onPressed: () {}, child: const Text('Projects')),
+    ),
   ];
 
   bool isMobile = false;
@@ -19,7 +27,9 @@ class _PortfolioState extends State<Portfolio> {
   Widget build(BuildContext context) {
     isMobile = MediaQuery.of(context).size.width > 700 ? false : true;
     return Scaffold(
+      backgroundColor: Colors.blue[50],
       appBar: AppBar(
+        backgroundColor: Colors.blue,
         title: const Text('Md. Meraj Hossain'),
         actions: isMobile ? null : navItems,
       ),
@@ -30,8 +40,17 @@ class _PortfolioState extends State<Portfolio> {
               ),
             )
           : null,
-      body: const Center(
-        child: Text('My Portfolio Website'),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Wrap(
+              children: [
+                About(),
+                Education(),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
