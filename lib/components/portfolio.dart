@@ -13,7 +13,11 @@ class _PortfolioState extends State<Portfolio> {
   List<Widget> navItems = [
     Padding(
       padding: const EdgeInsets.all(8.0),
-      child: ElevatedButton(onPressed: () {}, child: const Text('Education')),
+      child: ElevatedButton(
+          onPressed: () {
+            print('education');
+          },
+          child: const Text('Education')),
     ),
     Padding(
       padding: const EdgeInsets.all(8.0),
@@ -44,7 +48,8 @@ class _PortfolioState extends State<Portfolio> {
         child: Column(
           children: [
             Wrap(
-              children: [
+              alignment: WrapAlignment.center,
+              children: const [
                 About(),
                 Education(),
               ],
