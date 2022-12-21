@@ -66,30 +66,74 @@ class _AboutState extends State<About> {
             color: Colors.black,
             thickness: 1,
           ),
-          Container(
-            child: Row(
-              children: [
-                const Card(
-                  child: Padding(
-                    padding: EdgeInsets.all(12.0),
-                    child: FaIcon(
-                      FontAwesomeIcons.githubAlt,
-                      size: 20,
-                    ),
+          Row(
+            children: [
+              const Card(
+                child: Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: FaIcon(
+                    FontAwesomeIcons.githubAlt,
+                    size: 20,
                   ),
                 ),
-                const SizedBox(
-                  width: 10,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text('GitHub'),
+                  Text('merajhossain028'),
+                ],
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              const Card(
+                child: Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: FaIcon(
+                    FontAwesomeIcons.githubAlt,
+                    size: 20,
+                  ),
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text('GitHub'),
-                    Text('merajhossain028'),
-                  ],
-                )
-              ],
-            ),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text('GitHub'),
+                  Text('merajhossain028'),
+                ],
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              const Card(
+                child: Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: FaIcon(
+                    FontAwesomeIcons.githubAlt,
+                    size: 20,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text('GitHub'),
+                  Text('merajhossain028'),
+                ],
+              ),
+            ],
           ),
         ],
       ),
