@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:timelines/timelines.dart';
 
@@ -22,6 +20,7 @@ class _EducationState extends State<Education> {
         color: Colors.white,
       ),
       padding: const EdgeInsets.all(30),
+      height: 700.0,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

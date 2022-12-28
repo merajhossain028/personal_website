@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AnimatedButton extends StatefulWidget {
-  const AnimatedButton({super.key});
+  final IconData icon;
+  final String title;
+  final String subtitle;
+  const AnimatedButton({super.key, required this.icon, required this.title, required this.subtitle});
 
   @override
   State<AnimatedButton> createState() => _AnimatedButtonState();
@@ -33,11 +36,11 @@ class _AnimatedButtonState extends State<AnimatedButton> {
         padding: const EdgeInsets.all(8.0),
         child: Row(
           children: [
-            const Card(
+             Card(
               child: Padding(
-                padding: EdgeInsets.all(12.0),
+                padding:const EdgeInsets.all(12.0),
                 child: FaIcon(
-                  FontAwesomeIcons.githubAlt,
+                  widget.icon,
                   size: 20,
                 ),
               ),
@@ -47,9 +50,9 @@ class _AnimatedButtonState extends State<AnimatedButton> {
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text('GitHub'),
-                Text('merajhossain028'),
+              children: [
+                Text(widget.title),
+                Text(widget.subtitle),
               ],
             ),
           ],

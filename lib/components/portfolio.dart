@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:personal_website/components/about.dart';
 import 'package:personal_website/components/education.dart';
+import 'package:personal_website/components/footer.dart';
 
 class Portfolio extends StatefulWidget {
   const Portfolio({super.key});
@@ -54,6 +55,7 @@ class _PortfolioState extends State<Portfolio> {
                 Education(),
               ],
             ),
+            Footer(),
           ],
         ),
       ),
